@@ -12,11 +12,14 @@ jobs:
     steps: 
       - name: Checkout php
         uses: actions/checkout@v4
-      - name: Setup node
-        uses: actions/setup-node@v4
+
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v2
+
       - name: node install
         run:
           npm install
+          
       - name: build the app
         run:
           npm build
