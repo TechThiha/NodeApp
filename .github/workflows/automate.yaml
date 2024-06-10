@@ -5,6 +5,9 @@ on:
       branches:
         - dev
         - main
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}  
+  
 jobs:
   build:
     name: Build OS
