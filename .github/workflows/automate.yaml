@@ -15,11 +15,12 @@ jobs:
 
       - name: Install Protoc
         uses: arduino/setup-protoc@v2
-
+        with:
+          version: latest 
       - name: node install
         run:
           npm install
-          
+
       - name: build the app
         run:
           npm build
